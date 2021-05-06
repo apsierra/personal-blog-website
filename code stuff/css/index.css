@@ -1,0 +1,90 @@
+@import "typography.css";
+@import "index-img.css";
+@import "index-footer.css";
+
+/* Header/Blog Title */
+  .header {
+    padding: 50px;
+    font-size: 20px;
+    text-align: center;
+    background:rgb(236, 170, 170);
+  }
+  /* Left column */
+  .leftcolumn { 
+    float: center;
+    width: 75%;
+    padding-left: 20px;
+  }
+  /* Right column */
+  .rightcolumn {
+    float: center;
+    width: 75%;
+    padding-left: 20px;
+  }
+  /* Add a card effect for articles */
+  .card {
+    background-color: rgb(196, 194, 194);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* float images side by side */
+ * {
+    box-sizing: border-box;
+  }
+  .img-container {
+    float: right;
+    width: 33.33%;
+    padding: 10px;
+    }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .container{
+    display:grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 250px 500px;
+    grid-template-areas: 
+      "hd hd hd hd hd hd hd"
+      "main main main main main main main"
+      "ft ft ft ft ft ft ft";
+    border: 2px solid yellow;
+  }
+  .box{
+    border: 1px solid red;
+    background: #F8FA9D;
+    }
+
+  .header{
+    grid-area:hd;
+  }
+  .footer{
+    grid-area:ft;
+  }
+  .content{
+    grid-area:main;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn { 
+      width: 100%;
+      padding: 0;
+     }
+    }
+   @media screen and (max-width: 1500px) {
+    .leftcolumn, .rightcolumn { 
+      width: 100%;
+      padding: 0;
+      justify-content: center;
+      }
+    }
+  
